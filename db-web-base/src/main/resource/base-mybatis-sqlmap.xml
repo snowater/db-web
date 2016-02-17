@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- defaultStatementTimeout (iBATIS versions 2.2.0 and later) This setting 
+        is an integer value that will be applied as the JDBC query timeout for all 
+        statements. This value can be overridden with the “statement” attribute of 
+        any mapped statement. If not specified, no query timeout will be set unless 
+        specified on the “statement” attribute of a mapped statement. The specified 
+        value is the number of seconds the driver will wait for a statement to finish. 
+        Note that not all drivers support this setting. 查询语句的默认超时时间，设置为120秒，2分钟 -->
+    <settings>
+        <setting name="defaultStatementTimeout" value="120"/>
+    </settings>
+    
+	<typeAliases>
+		<typeAlias alias="Student" type="com.snow.db.web.base.student.Student" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="com/snow/db/web/base/student/Student.xml" />
+	</mappers>
+</configuration>

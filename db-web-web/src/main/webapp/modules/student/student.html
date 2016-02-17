@@ -1,0 +1,18 @@
+<#include "/template/common.html"> <@page title="系统帐号管理" index=4>
+<!-- 每个页面都要加载common.html -->
+
+<div id="query">
+	<span>id:</span>     <input id="idInput" type="text" /> 
+	<span>name:</span>   <input id="nameInput" type="text" /> 
+	<span>age:</span> 	 <input id="ageInput" type="text" /> 
+	<span>gender:</span> <input id="genderInput" type="text" />
+	<button id="queryButton">查询</button>
+</div>
+
+<div id="result">
+	<div id="list" class="pageContent"></div>
+</div>
+
+
+<script type="text/javascript" src="/js/modules/student/student.js"></script>
+</@page>

@@ -1,0 +1,35 @@
+<#include "/template/base.ftl.html">
+<#macro page title index=0>	
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-style-type" content="text/css"/>
+		<meta http-equiv="content-script-type" content="text/javascript"/>
+		<meta http-equiv="x-ua-compatible" content="ie=emulateie7"/>
+
+		<title>student-${title}</title>
+		<@js file="/js/jquery/jquery-1.11.3.min.js" />
+		<@js file="/js/jquery/jquery.render.js" />
+		<@js file="/js/jquery/jquery.selectboxes.pack.js" />
+		<@js file="/js/jquery/jquery-ui-1.8.11.custom.min.js" />
+		<@js file="/js/jquery/jquery.json.min.js" />
+		<@js file="/js/jquery/jquery.pagination.js" />
+		<@js file="/js/jquery/jquery.pager.js" />
+		<@js file="/js/jquery/jquery-ui-timepicker-addon-min.js" />
+		<@js file="/js/jquery/jquery.form.js" />
+		<@js file="/js/jquery/jquery.validation.js" />
+		<@js file="/js/jquery/jquery.lazyload.mini.js" />
+		<@js file="/js/jquery/jquery.ui.position.js" />
+		<@js file="/js/jquery/jquery.scroll-follow.js" />	
+		<@js file="/js/jquery/jquery.fancybox-1.3.4.pack.js" />
+
+		<!-- <@js file="/js/modules/utils/logger.js" /> -->
+		<!-- <@js file="/js/modules/utils/util.js" /> -->
+		
+	</head>
+	<body>
+        <#nested>
+	</body>
+</html>
+</#macro>
