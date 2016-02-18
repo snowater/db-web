@@ -25,6 +25,7 @@ $(document).ready(function() {
 		var param = loadQueryParam();
 		alert(param.id +","+ param.name +","+ param.age +","+ param.gender);
 		$.postJSON(prefix+"/queryStudent.json", param, function(data){
+			alert(data.length);
 			$("#list").render(studentTableTemplate, {"list":data});
 			$("#list tbody tr:odd").css("background-color","#B2E0FF");
 //			$("#list a.editbtn").click(function(event){

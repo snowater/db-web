@@ -5,12 +5,15 @@
  */
 package com.snow.db.web.base.student;
 
+import java.io.Serializable;
 
 /**
  * @author hzwanghuiqi
  * @version 2016年1月25日
  */
-public class Student {
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = 1199268619808650245L;
 
     private String id;
     private String name;

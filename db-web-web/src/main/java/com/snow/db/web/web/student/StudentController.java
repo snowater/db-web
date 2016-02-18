@@ -12,7 +12,6 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.snow.db.web.base.student.Student;
@@ -30,13 +29,14 @@ public class StudentController {
     @Resource
     private StudentService studentService;
 
-    @RequestMapping(value = "/queryStudent.json", method = RequestMethod.POST)
+    @RequestMapping(value = "/queryStudent.json")
     @ResponseBody
     public List<Student> searchStudent(@RequestBody Student student) {
         student.display();
         List<Student> list = studentService.queryAllStudent();
         return list;
     }
+
 
 
 }
